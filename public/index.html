@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Chat</title>
+</head>
+<body>
+    <header>
+        <h1>Video Chat Application</h1>
+    </header>
+    <main>
+        <div class="video-chat">
+            <div class="user-container">
+                <h3>User A</h3>
+                <div class="user-video">
+                    <video autoplay playsinline></video>
+                </div>
+            </div>
+            <div class="remote-container">
+                <h3>User B</h3>
+                <div class="remote-video">
+                    <video autoplay playsinline></video>
+                </div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <h3>Chat</h3>
+            <div class="chat-box">
+                <ul id="chat-messages"></ul>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off" />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Video Chat App. All Rights Reserved.</p>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

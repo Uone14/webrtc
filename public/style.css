@@ -1,0 +1,209 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 30px;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* Video Chat Styling */
+.video-chat {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap; /* Responsif untuk layar kecil */
+}
+
+/* User and Remote Container */
+.user-container, .remote-container {
+    flex: 1;
+    min-width: 500px; /* Minimum ukuran bingkai */
+    height: 450px; /* Tinggi bingkai tetap */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-container:hover, .remote-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Box Styling */
+.user-video, .remote-video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-bottom: 5px solid #2575fc;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar video memenuhi bingkai */
+}
+
+/* Chat Container Styling */
+.chat-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+    height: 250px;
+    overflow-y: auto;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f4f6f9;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+#chat-messages {
+    list-style: none;
+    padding: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+#chat-messages li {
+    margin-bottom: 12px;
+}
+
+#chat-messages li span {
+    font-weight: 600;
+    color: #2575fc;
+}
+
+/* Input Styling */
+#chat-input {
+    width: calc(100% - 120px);
+    padding: 12px;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chat-input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(37, 117, 252, 0.3);
+}
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5b9cff;
+}
+
+button:active {
+    background-color: #1e63d3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f7f7f7;
+    padding: 15px;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .video-chat {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-container, .remote-container {
+        min-width: 90%;
+        height: 350px; /* Kurangi tinggi untuk layar kecil */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .user-container, .remote-container {
+        min-width: 100%;
+        height: 300px;
+    }
+
+    .chat-container {
+        width: 100%;
+    }
+}
